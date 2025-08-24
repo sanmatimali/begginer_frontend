@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section id="navbar">
+         <div class="head">
+            <h1>Vijeera HR</h1>
+            <p>Professional HR Academy</p>
+        </div>
+        <div>
+        <ul id="nav">
+            <li><a  href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="courses.html">HR Courses</a></li>
+            <li><a href="training.html">Corporate Training</a></li>
+            <li><a href="certificate.html">Training Certificate</a></li>
+            <li><a class="active" href="contact.html">Contact us</a></li>
+        </ul>
+    </div>
+    </section>
+        
+  <div class="background">
+    <div class="container">
+      <form class="contact-form" onsubmit="showAlert(event)">
+        <label>Name</label>
+        <input type="text" placeholder="Enter Name" required />
+        
+        <label>Email</label>
+        <input type="email" placeholder="Enter Email" required />
+        
+        <label>Phone</label>
+        <input type="tel" placeholder="Enter Number" required />
+        
+        <label>Subject</label>
+        <input type="text" placeholder="Subject" required />
+        
+        <label>Message</label>
+        <textarea placeholder="Enter Message" rows="4" required></textarea>
+        
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+ <footer id="contact-footer">
+    <div class="contact-info">
+        <p><strong>8 The Green, Ste A, Dover,<br>DE 19901, Finland</strong></p>
+        <p>Contact <a href="tel:+345099044506"><strong>+345 09-904-4506</strong></a></p>
+    </div>
+</footer>
+<script>
+  function showAlert(event) {
+    event.preventDefault(); 
+    alert("📨 Thank you for contacting Vijeera HR Academy! We will get back to you soon.");
+    event.target.reset();
+  }
+</script>
+
+</body>
+</html>

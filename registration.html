@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HR Course Registration</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: #f2f2f2;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .register-container {
+      max-width: 500px;
+      height: 75vh;
+      margin: 60px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .register-container h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #2d3e91;
+    }
+
+    .register-container label {
+      display: block;
+      margin: 20px 0 5px;
+      font-weight: 600;
+    }
+
+    .register-container input,
+    .register-container select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    .register-container button {
+      margin-top: 40px;
+      margin-left: 150px;
+      padding: 15px;
+      width: 30%;
+      background-color: #2d3e91;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .register-container button:hover {
+      background-color: #1c2874;
+    }
+  </style>
+</head>
+<body>
+     <section id="navbar">
+         <div class="head">
+            <h1>Vijeera HR</h1>
+            <p>Professional HR Academy</p>
+        </div>
+        <div>
+        <ul id="nav">
+            <li><a  href="index.html">Home</a></li>
+            <li><a  href="about.html">About us</a></li>
+            <li><a  class="active" href="courses.html">HR Courses</a></li>
+            <li><a href="training.html">Corporate Training</a></li>
+            <li><a href="certificate.html">Training Certificate</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+        </ul>
+    </div>
+    </section>
+
+    
+  <div class="background">
+  <div class="register-container">
+    <h2>Registeration Form</h2>
+    <form onsubmit="showAlert(event)">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required />
+
+      <label for="course">Select Course</label>
+      <select id="course" name="course" required>
+        <option value="">-- Select a Course --</option>
+        <option value="HR Professional">HR Professional</option>
+        <option value="HR Generalist">HR Generalist</option>
+        <option value="HR Analytics">HR Analytics</option>
+      </select>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div></div>
+
+   <footer id="contact-footer">
+    <div class="contact-info">
+        <p><strong>8 The Green, Ste A, Dover,<br>DE 19901, Finland</strong></p>
+        <p>Contact <a href="tel:+345099044506"><strong>+345 09-904-4506</strong></a></p>
+    </div>
+    
+</footer>
+
+  <script>
+    function showAlert(event) {
+      event.preventDefault(); 
+      alert("✅ Thank you for registering with Vijeera HR Academy!");
+      event.target.reset();
+    }
+  </script>
+
+</body>
+</html>
